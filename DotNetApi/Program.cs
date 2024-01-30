@@ -29,7 +29,7 @@ internal class Program
         // and prevents a 404 when the user refreshes the browser
         app.Use(async (context, next) =>
         {
-            if (context.Request.Path.HasValue && context.Request.Path.Value != "/")
+            if (context.Request.Path.HasValue && context.Request.Path.Value == "/")
             {
                 context.Response.ContentType = "text/html";
 
